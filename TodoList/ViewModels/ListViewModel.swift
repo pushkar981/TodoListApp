@@ -17,7 +17,7 @@ class ListViewModel: ObservableObject {
     let itemsKey: String = "items_list"
     
     init() {
-        guard 
+        guard
             let data = UserDefaults.standard.data(forKey: itemsKey),
             let saveItems = try? JSONDecoder().decode([ItemModel].self, from: data)
         else { return }
